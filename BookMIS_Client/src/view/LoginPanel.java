@@ -14,6 +14,7 @@ import javax.swing.JTextField;
  * 登录面板
  * */
 public class LoginPanel extends JPanel {
+	private static final long serialVersionUID = 7532873218164421655L;
 	private JTextField usernameField;
 	private JPasswordField passwordField;
 	public JTextField getUsernameField() {

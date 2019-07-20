@@ -1,6 +1,5 @@
 package control;
 
-import java.awt.Component;
 import java.io.IOException;
 import java.util.List;
 import java.util.Map;
@@ -11,8 +10,6 @@ import com.alibaba.fastjson.JSONObject;
 import model.Book;
 import model.BookOperatorResult;
 import tool.SocketTool;
-import view.LoginPanel;
-import view.MainFrame;
 
 public class BookOperator {
 	/**

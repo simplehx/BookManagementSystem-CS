@@ -3,7 +3,6 @@ package view;
 import java.awt.BorderLayout;
 import java.util.ArrayList;
 import java.util.List;
-import java.util.Map;
 
 import javax.swing.JPanel;
 import javax.swing.JScrollPane;
@@ -16,6 +15,7 @@ import javax.swing.table.DefaultTableModel;
 import model.Book;
 
 public class ResultSelectPanel extends JPanel {
+	private static final long serialVersionUID = -938092556882039953L;
 	private List<Book> selectedBookList;
 	public List<Book> getSelectedBookList() {
 		return selectedBookList;
@@ -29,6 +29,8 @@ public class ResultSelectPanel extends JPanel {
 		
 		//不允许编辑
 		JTable resultTable = new JTable(model) {
+			private static final long serialVersionUID = 7295431685577816675L;
+
 			@Override
 			public boolean isCellEditable(int row, int column) {
 				// TODO Auto-generated method stub

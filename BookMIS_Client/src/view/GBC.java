@@ -7,6 +7,8 @@ import java.awt.Insets;
  * GridBagConstraints 辅助类
  */
 public class GBC extends GridBagConstraints {
+	private static final long serialVersionUID = -4502777483259809122L;
+
 	public GBC(int gridx, int gridy) {
 		this.gridx = gridx;
 		this.gridy = gridy;

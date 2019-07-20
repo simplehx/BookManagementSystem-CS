@@ -22,7 +22,6 @@ import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 import org.jb2011.lnf.beautyeye.ch3_button.BEButtonUI;
-import org.jb2011.lnf.beautyeye.ch6_textcoms.BETextAreaUI;
 
 import control.BookOperator;
 import model.Book;
@@ -30,6 +29,8 @@ import model.BookOperatorResult;
 import tool.UITool;
 
 public class AddBookPanel extends JPanel {
+	private static final long serialVersionUID = 441649401445000402L;
+
 	public AddBookPanel(Component parentComponent) {
 		//构建界面
 		setLayout(new GridBagLayout());

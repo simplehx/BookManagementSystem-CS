@@ -70,6 +70,8 @@ class ServerThreadHandler implements Runnable {
 			
 			JSONObject jsonObject = JSON.parseObject(requestJsonData);
 			String requestModule = jsonObject.getString("requestModule");
+			
+			//将请求分发到不同的处理模块
 			switch (requestModule) {
 				case "bookModule":
 					BookOperatorResult bookOperatorResult = ClientRequestForwardOperator.getBookOperatorResult(JsonTool.bookRequestForwardAnalysis(requestJsonData));

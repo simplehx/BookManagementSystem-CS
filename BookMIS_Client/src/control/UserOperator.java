@@ -1,7 +1,5 @@
 package control;
 
-
-import java.awt.Component;
 import java.io.IOException;
 
 import com.alibaba.fastjson.JSON;

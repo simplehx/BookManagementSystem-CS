@@ -25,6 +25,8 @@ import model.BookOperatorResult;
 import tool.UITool;
 
 public class ChangeBookPanel extends SearchPanel {
+	private static final long serialVersionUID = 1385150328975553794L;
+
 	public ChangeBookPanel(Component parentComponent, JFrame owner) {
 		super("img/change.png", "修改图书");
 		JButton submitButton = new JButton("修改");

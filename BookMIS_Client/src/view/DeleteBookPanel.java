@@ -27,6 +27,8 @@ import tool.UITool;
 
 public class DeleteBookPanel extends SearchPanel {
 	
+	private static final long serialVersionUID = 8582117029692958847L;
+
 	public DeleteBookPanel(Component parentComponent, JFrame owner) {
 		super("img/delete.png", "删除图书");
 		

@@ -2,9 +2,6 @@ package view;
 
 import java.awt.BorderLayout;
 import java.awt.Component;
-import java.awt.Font;
-import java.awt.GridBagLayout;
-import java.awt.Image;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
 import java.io.IOException;
@@ -14,14 +11,11 @@ import java.util.LinkedHashMap;
 import java.util.List;
 import java.util.Map;
 
-import javax.swing.ImageIcon;
 import javax.swing.JButton;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
-import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
-import javax.swing.JTextField;
 
 import org.jb2011.lnf.beautyeye.ch3_button.BEButtonUI;
 
@@ -31,6 +25,7 @@ import model.BookOperatorResult;
 import tool.UITool;
 
 public class SearchBookPanel extends SearchPanel {
+	private static final long serialVersionUID = -6688480561344634027L;
 
 	public SearchBookPanel(Component parentComponent, JFrame owner) {
 		super("img/search.png", "查找图书");

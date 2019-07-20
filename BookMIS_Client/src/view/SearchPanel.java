@@ -12,6 +12,7 @@ import javax.swing.JTextField;
 
 
 public class SearchPanel extends JPanel {
+	private static final long serialVersionUID = -3231986715763173386L;
 	private JTextField bookNameField;
 	private JTextField bookAuthorField;
 	private JTextField bookPressField;

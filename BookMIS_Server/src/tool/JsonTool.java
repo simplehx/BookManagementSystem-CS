@@ -24,10 +24,10 @@ public class JsonTool {
 		
 		switch (requestMethod) {
 			case "addBook":
-				requestBook = jsonObject.parseObject(requestParameter, Book.class);
+				requestBook = JSONObject.parseObject(requestParameter, Book.class);
 				break;
 			case "deleteBook":
-				requestBookList = jsonObject.parseArray(requestParameter, Book.class);
+				requestBookList = JSONObject.parseArray(requestParameter, Book.class);
 				break;
 			case "changeBook":
 				Map<String, Object> map = JSONObject.toJavaObject(JSON.parseObject(requestParameter), Map.class);
@@ -38,7 +38,7 @@ public class JsonTool {
 				}
 				break;
 			case "searchBook":
-				requestBook = jsonObject.parseObject(requestParameter, Book.class);
+				requestBook = JSONObject.parseObject(requestParameter, Book.class);
 				break;
 		}
 		
@@ -54,7 +54,7 @@ public class JsonTool {
 		JSONObject jsonObject = JSON.parseObject(jsonData);
 		String requestMethod = jsonObject.getString("requestMethod");
 		String requestParameter = jsonObject.getString("requestParameter");
-		User user = jsonObject.parseObject(requestParameter, User.class);
+		User user = JSONObject.parseObject(requestParameter, User.class);
 		ClientUserRequest clientUserRequest = new ClientUserRequest();
 		clientUserRequest.setRequestMethod(requestMethod);
 		clientUserRequest.setRequestUser(user);

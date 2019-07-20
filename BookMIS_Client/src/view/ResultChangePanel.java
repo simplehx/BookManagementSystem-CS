@@ -21,6 +21,7 @@ import model.Book;
  * 结果修改面板
  * */
 public class ResultChangePanel extends JPanel {
+	private static final long serialVersionUID = -7668007965323649040L;
 	private int selectedBookId;
 	private Map<String, Book> changedBookMap;
 	

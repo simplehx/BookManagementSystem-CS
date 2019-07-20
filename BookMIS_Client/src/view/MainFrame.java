@@ -35,6 +35,7 @@ import tool.UITool;
 
 
 public class MainFrame extends JFrame {
+	private static final long serialVersionUID = 1435050650212216446L;
 	private JPanel optionPanel;
 	private JPanel contentPanel;
 	private int screenHeight;
