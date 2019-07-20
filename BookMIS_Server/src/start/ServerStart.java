@@ -1,4 +1,4 @@
-package test;
+package start;
 
 import java.io.InputStream;
 import java.io.OutputStream;
@@ -17,7 +17,7 @@ import tool.JsonTool;
 
 
 
-public class ServerTest {
+public class ServerStart {
 	public static void main(String[] args) {
 		ServerSocket serverSocket = null;
 		try {
@@ -25,7 +25,7 @@ public class ServerTest {
 			System.out.println("服务器启动");
 			while(true) {
 				Socket incoming = serverSocket.accept();
-				System.out.println("客户端 " + incoming.getInetAddress() + "已连接");
+				System.out.println("客户端 " + incoming.getInetAddress() + "请求已连接");
 				Runnable runnable = new ServerThreadHandler(incoming);
 				Thread thread = new Thread(runnable);
 				thread.start();
@@ -54,13 +54,17 @@ class ServerThreadHandler implements Runnable {
 	
 	@Override
 	public void run() {
+		InputStream inputStream = null;
+		OutputStream outputStream = null;
+		Scanner in = null;
+		PrintWriter out = null;
 		try {
-			InputStream inputStream = incoming.getInputStream();
-			OutputStream outputStream = incoming.getOutputStream();
+			inputStream = incoming.getInputStream();
+			outputStream = incoming.getOutputStream();
 			
-			Scanner in = new Scanner(inputStream, "UTF-8");
+			in = new Scanner(inputStream, "UTF-8");
 			
-			PrintWriter out = new PrintWriter(new OutputStreamWriter(outputStream, "UTF-8"), true);
+			out = new PrintWriter(new OutputStreamWriter(outputStream, "UTF-8"), true);
 			
 			String requestJsonData = in.nextLine();
 			
@@ -81,6 +85,36 @@ class ServerThreadHandler implements Runnable {
 
 		} catch (Exception e) {
 			e.printStackTrace();
+		} finally {
+			try {
+				if(out != null) {
+					out.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				if(in != null) {
+					in.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				if(outputStream != null) {
+					outputStream.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			try {
+				if(inputStream != null) {
+					inputStream.close();
+				}
+			} catch (Exception e) {
+				e.printStackTrace();
+			}
+			System.out.println("客户端 " + incoming.getInetAddress() + "连接已释放");
 		}
 	}
 }
