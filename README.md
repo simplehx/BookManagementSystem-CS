@@ -4,29 +4,32 @@
 
 # 一、部分效果图
 ## 1、主界面
-![主界面](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718162819.jpg)
+![主界面](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190718162819.jpg)
 ## 2、管理员登录
-![管理员登录](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718162828.jpg)
+![管理员登录](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190718162828.jpg)
 ## 3、添加图书
-![添加图书](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718162904.jpg)
+![添加图书](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190718162904.jpg)
 ## 4、查找图书
-![查找图书](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718162921.jpg)
+![查找图书](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190718162921.jpg)
 ## 5、删除图书
-![删除图书](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718170004.jpg)
+![删除图书](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190718170004.jpg)
 ## 6、修改图书
-![修改图书](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718170028.jpg)
+![修改图书](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190718170028.jpg)
 
 # 二、使用方法
 ## 1、将book_mis.sql文件导入自己的数据库
 ## 2、修改db.properties文件中的PASSWORD字段为自己的数据库密码
 ![](https://github.com/simplehx/Book-Management-System/blob/master/screenshots/20190718162740.jpg)
 ## 3、启动服务器
-启动ServerStart.java
+启动ServerStart.java  
+![启动服务器](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190721192725.png)
 ## 3、启动客户端
-启动MainFrame.java
+启动MainFrame.java  
+![启动客户端](https://github.com/simplehx/BookManagementSystem-CS/blob/master/screenshots/20190721192703.png)
 ## 3、默认管理员账号为admin  密码为123
 
-# 三、使用了beautyeye，项目地址
+# 三、使用了beautyeye和fastjson，项目地址
+[fastjson](https://github.com/alibaba/fastjson)  
 [beautyeye](https://github.com/JackJiang2011/beautyeye)
 
 # 四、注意事项
