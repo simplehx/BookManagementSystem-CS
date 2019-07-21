@@ -15,12 +15,15 @@ import control.ClientRequestForwardOperator;
 import model.BookOperatorResult;
 import tool.JsonTool;
 
-
-
 public class ServerStart {
 	public static void main(String[] args) {
+		new ServerStart();
+	}
+	
+	public ServerStart() {
 		ServerSocket serverSocket = null;
 		try {
+			//启动服务器
 			serverSocket = new ServerSocket(2333);
 			System.out.println("服务器启动");
 			while(true) {
@@ -88,6 +91,7 @@ class ServerThreadHandler implements Runnable {
 		} catch (Exception e) {
 			e.printStackTrace();
 		} finally {
+			//释放连接资源
 			try {
 				if(out != null) {
 					out.close();

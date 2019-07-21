@@ -14,6 +14,9 @@ import model.User;
 
 public class JsonTool {
 	
+	/**
+	 * 处理图书相关请求
+	 * */
 	public static ClientBookRequest bookRequestForwardAnalysis(String jsonData) {
 		JSONObject jsonObject = JSON.parseObject(jsonData);
 		String requestMethod = jsonObject.getString("requestMethod");
@@ -22,6 +25,7 @@ public class JsonTool {
 		List<Book> requestBookList = null;
 		Map<String, Book> requestBookMap = null;
 		
+		//根据请求的方法转发请求
 		switch (requestMethod) {
 			case "addBook":
 				requestBook = JSONObject.parseObject(requestParameter, Book.class);
@@ -50,6 +54,9 @@ public class JsonTool {
 		return clientRequest;
 	}
 	
+	/***
+	 * 处理用户相关请求
+	 */
 	public static ClientUserRequest userRequestForwardAnalysis(String jsonData) {
 		JSONObject jsonObject = JSON.parseObject(jsonData);
 		String requestMethod = jsonObject.getString("requestMethod");
